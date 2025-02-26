@@ -2,11 +2,11 @@
 
 ## Algoritmo de Karatsuba
 
-O algoritmo de Karatsuba é um método eficiente para a multiplicação de números grandes, reduzindo a complexidade da abordagem tradicional de \(O(n^2)\) para \(O(n^{\log_2(3)})\). Nesta atividade, analiso a complexidade ciclomática e assintótica da implementação do algoritmo em Python.
+O algoritmo de Karatsuba é um método eficiente para a multiplicação de números grandes, reduzindo a complexidade da abordagem tradicional de O(n²) para O(n<sup>log₂(3)</sup>). Nesta atividade, analiso a complexidade ciclomática e assintótica da implementação do algoritmo em Python.
 
 ## Complexidade Ciclomática
 
-A complexidade ciclomática (\(M\)) mede a complexidade do fluxo de controle do programa. Para calcular \(M\), seguimos os seguintes passos:
+A complexidade ciclomática (M) mede a complexidade do fluxo de controle do programa. Para calcular M, seguimos os seguintes passos:
 
 ## Fluxo de Controle da Função
 
@@ -46,25 +46,24 @@ Total de 10 arestas
 ## Cálculo da Complexidade Ciclomática
 
 A fórmula para calcular a complexidade ciclomática é:
-\[
+
 M = E - N + 2P
-\]
+
 Onde:
 
-- **\(E\)**: Número de arestas
-- **\(N\)**: Número de nós
-- **\(P\)**: Número de componentes conexos (para um programa simples, \(P = 1\))
+- **E**: Número de arestas
+- **N**: Número de nós
+- **P**: Número de componentes conexos (para um programa simples, P = 1)
 
 Ao analisar a função `karatsuba`, estimamos os seguintes valores:
 
-- **\(N = 11\)** (decisões, chamadas recursivas e operações principais)
-- **\(E = 10\)** (fluxo de controle entre as operações)
-- **\(P = 1\)** (uma única função principal)
+- **N = 11** (decisões, chamadas recursivas e operações principais)
+- **E = 10** (fluxo de controle entre as operações)
+- **P = 1** (uma única função principal)
 
 Assim, a complexidade ciclomática é:
-\[
-M = 10 - 11 + 2\*(1) = 2
-\]
+
+M = 10 - 11 + 2*(1) = 2
 
 A complexidade ciclomática significa que o programa possui dois caminhos lineares independentes de execução. Isso se deve ao fato de que a estrutura de controle inclui apenas uma condição de decisão (`if x < 10 or y < 10`), que determina se o programa segue para o cálculo normal da multiplicação ou entra no processo recursivo de Karatsuba.
 
@@ -88,77 +87,36 @@ Assim, a função `karatsuba(x, y)` sempre seguirá um dos dois fluxos possívei
 
 O algoritmo de Karatsuba reduz o número de multiplicações necessárias utilizando a estratégia de divisão e conquista. Sua complexidade é definida pela seguinte relação de recorrência:
 
-\[
-`T(n) = 3T(n/2) + O(n)`
-\]
+T(n) = 3T(n/2) + O(n)
 
-Usando o Teorema Mestre \( `T(n) = aT(n/b) + O(n^d)` \), temos:
+Usando o Teorema Mestre T(n) = aT(n/b) + O(n<sup>d</sup>), temos:
 
--  `a = 3`  (três subproblemas gerados)
--  `b = 2`  (o problema é dividido em duas partes)
--  `d = 1`  (operações são \( O(n) \))
+- a = 3 (três subproblemas gerados)
+- b = 2 (o problema é dividido em duas partes)
+- d = 1 (operações são O(n))
 
-
-
-`Θp = Θ(n^{\log_2(3)})`
-
+Θp = Θ(n<sup>log₂(3)</sup>)
 
 Aproximadamente:
 
+Θ(n<sup>1.585</sup>)
 
-`Θ(n^{1.585})`
-
-
-Como \(O(n)\), cresce mais lentamente que \( O(n^p) \), Logo \(T(n) = Θ(n^{1.585})\)
+Como O(n) cresce mais lentamente que O(n<sup>p</sup>), Logo T(n) = Θ(n<sup>1.585</sup>)
 
 ### Melhor Caso
 
-O melhor caso ocorre quando um dos números é pequeno o suficiente para acionar a condição base (\( x < 10 \) ou \( y < 10 \)), resultando em uma multiplicação direta \( O(1) \).
+O melhor caso ocorre quando um dos números é pequeno o suficiente para acionar a condição base (x < 10 ou y < 10), resultando em uma multiplicação direta O(1).
 
 ### Caso Médio
 
-No caso médio, os números têm tamanhos comparáveis, e o algoritmo executa recursivamente três multiplicações para cada divisão em duas partes, levando a \( O(n^{1.585}) \).
+No caso médio, os números têm tamanhos comparáveis, e o algoritmo executa recursivamente três multiplicações para cada divisão em duas partes, levando a O(n<sup>1.585</sup>).
 
 ### Pior Caso
 
-O pior caso também segue \( O(n^{1.585}) \), pois a estrutura recursiva sempre se mantém constante. No entanto, pode haver overhead adicional se os números não forem exatamente potências de 2.
+O pior caso também segue O(n<sup>1.585</sup>), pois a estrutura recursiva sempre se mantém constante. No entanto, pode haver overhead adicional se os números não forem exatamente potências de 2.
 
 ## Execução
 
 ### Executando o projeto
 
 Acesse a raiz do projeto no terminal e execute:
-
-```bash
-python3 main.py
-```
-
-### Caso não possua o python
-
-### MacOS
-
-Instale o python 3 com Homebrew
-
-```bash
-brew install python
-```
-
-### Windows
-
-1. Baixe o instalador do Python no site oficial:  
-   [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
-2. Durante a instalação, marque a opção **"Add Python to PATH"**.
-3. Após a instalação, abra um novo terminal e confirme a instalação com:
-
-```bash
-python --version
-```
-
-## Documentação e links úteis
-
-- [Algoritmo de Karatsuba](https://pt.wikipedia.org/wiki/Algoritmo_de_Karatsuba)
-- [Karatsuba - IME](https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/karatsuba.html)
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT.
