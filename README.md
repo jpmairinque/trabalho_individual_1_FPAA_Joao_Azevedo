@@ -109,7 +109,7 @@ Aproximadamente:
 `Θ(n^{1.585})`
 
 
-Como \(O(n)\), cresce mais lentamente que \(O(n^p)\), Logo \(T(n) = Θ(n^{1.585})\)
+Como \(O(n)\), cresce mais lentamente que \( O(n^p) \), Logo \(T(n) = Θ(n^{1.585})\)
 
 ### Melhor Caso
 
