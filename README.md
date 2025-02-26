@@ -86,33 +86,28 @@ Assim, a função `karatsuba(x, y)` sempre seguirá um dos dois fluxos possívei
 
 ## Complexidade Assintótica
 
-O algoritmo de Karatsuba reduz o número de multiplicações necessárias utilizando a estratégia de divisão e conquista.
-
-## Complexidade Temporal
-
-A complexidade do Karatsuba é definida pela seguinte relação de recorrência:
+O algoritmo de Karatsuba reduz o número de multiplicações necessárias utilizando a estratégia de divisão e conquista. Sua complexidade é definida pela seguinte relação de recorrência:
 
 \[
-T(n) = 3T(n/2) + O(n)
+`T(n) = 3T(n/2) + O(n)`
 \]
 
-Usando o Teorema Mestre \( T(n) = aT(n/b) + O(n^d) \), temos:
+Usando o Teorema Mestre \( `T(n) = aT(n/b) + O(n^d)` \), temos:
 
-- \( a = 3 \) (três subproblemas gerados)
-- \( b = 2 \) (o problema é dividido em duas partes)
-- \( d = 1 \) (operações são \( O(n) \))
+-  `a = 3`  (três subproblemas gerados)
+-  `b = 2`  (o problema é dividido em duas partes)
+-  `d = 1`  (operações são \( O(n) \))
 
-Como \( a > b^d \) (\( 3 > 2^1 \)), a complexidade segue:
 
-\[
-Θp = Θ(n^{\log_2(3)})
-\]
+
+`Θp = Θ(n^{\log_2(3)})`
+
 
 Aproximadamente:
 
-\[
-Θ(n^{1.585})
-\]
+
+`Θ(n^{1.585})`
+
 
 Como \(O(n)\), cresce mais lentamente que \(O(n^p)\), Logo \(T(n) = Θ(n^{1.585})\)
 
