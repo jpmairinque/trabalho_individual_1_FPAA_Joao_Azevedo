@@ -85,6 +85,12 @@ Se `x >= 10` e `y >= 10`, o algoritmo executa os seguintes passos:
 
 Assim, a função `karatsuba(x, y)` sempre seguirá um dos dois fluxos possíveis, garantindo que sua complexidade ciclomática seja exatamente **2**.
 
+## Grafo
+
+O grafo do algoritmo pode ser desenhado assim
+
+![Graph](Graph.png)
+
 ## Complexidade Assintótica
 
 O algoritmo de Karatsuba reduz o número de multiplicações necessárias utilizando a estratégia de divisão e conquista. Sua complexidade é definida pela seguinte relação de recorrência:
