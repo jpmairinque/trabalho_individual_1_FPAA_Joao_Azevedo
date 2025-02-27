@@ -117,6 +117,44 @@ O pior caso também segue O(n<sup>1.585</sup>), pois a estrutura recursiva sempr
 
 ## Execução
 
+
+
 ### Executando o projeto
 
+Acesse a raiz do projeto no terminal### Executando o projeto
+
 Acesse a raiz do projeto no terminal e execute:
+
+```bash
+python3 main.py
+```
+
+### Caso não possua o python
+
+### MacOS
+
+Instale o python 3 com Homebrew
+
+```bash
+brew install python
+```
+
+### Windows
+
+1. Baixe o instalador do Python no site oficial:  
+   [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+2. Durante a instalação, marque a opção **"Add Python to PATH"**.
+3. Após a instalação, abra um novo terminal e confirme a instalação com:
+
+```bash
+python --version
+```
+
+## Documentação e links úteis
+
+- [Algoritmo de Karatsuba](https://pt.wikipedia.org/wiki/Algoritmo_de_Karatsuba)
+- [Karatsuba - IME](https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/karatsuba.html)
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. e execute:
