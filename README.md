@@ -121,7 +121,7 @@ O pior caso também segue O(n<sup>1.585</sup>), pois a estrutura recursiva sempr
 
 ### Executando o projeto
 
-Acesse a raiz do projeto no terminal### Executando o projeto
+
 
 Acesse a raiz do projeto no terminal e execute:
 
