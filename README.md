@@ -26,6 +26,8 @@ O fluxo de controle da função `karatsuba(x, y)` pode ser representado por um g
 - **Nó 10**: Terceira chamada recursiva `c = karatsuba(x_high + x_low, y_high + y_low) - a - b`
 - **Nó 11**: Retorno final `return a * 10**(2*m) + c * 10**m + b`
 
+Total de 11 nós 
+
 ### Arestas
 
 As arestas representam o fluxo entre os nós do grafo:
